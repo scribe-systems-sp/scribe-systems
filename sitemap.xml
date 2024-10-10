@@ -2,72 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://scribe.systems/</loc>
-         <lastmod>2022-11-28</lastmod>
+         <lastmod>2024-10-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scribe.systems/barcode/</loc>
-         <lastmod>2022-11-28</lastmod>
+         <lastmod>2024-10-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scribe.systems/contact/</loc>
-         <lastmod>2022-11-28</lastmod>
+         <lastmod>2024-10-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scribe.systems/cybertap/</loc>
-         <lastmod>2022-11-28</lastmod>
+         <lastmod>2024-10-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scribe.systems/hyundai/</loc>
-         <lastmod>2022-11-28</lastmod>
+         <lastmod>2024-10-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scribe.systems/ortheo/</loc>
-         <lastmod>2022-11-28</lastmod>
+         <lastmod>2024-10-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scribe.systems/partnership/</loc>
-         <lastmod>2022-11-28</lastmod>
+         <lastmod>2024-10-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scribe.systems/scribe/</loc>
-         <lastmod>2022-11-28</lastmod>
+         <lastmod>2024-10-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scribe.systems/smarthelmet/</loc>
-         <lastmod>2022-11-28</lastmod>
+         <lastmod>2024-10-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scribe.systems/tcl/</loc>
-         <lastmod>2022-11-28</lastmod>
+         <lastmod>2024-10-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scribe.systems/visionbox/</loc>
-         <lastmod>2022-11-28</lastmod>
+         <lastmod>2024-10-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://scribe.systems/privacy/scribe-connect-en/</loc>
+         <lastmod>2024-10-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://scribe.systems/privacy/scribe-connect/</loc>
+         <lastmod>2024-10-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scribe.systems/projects/projects/</loc>
-         <lastmod>2022-11-28</lastmod>
+         <lastmod>2024-10-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scribe.systems/projects/open_balena_dashboard/obd/</loc>
-         <lastmod>2022-11-28</lastmod>
+         <lastmod>2024-10-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scribe.systems/projects/openbp/openbp/</loc>
-         <lastmod>2022-11-28</lastmod>
+         <lastmod>2024-10-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
