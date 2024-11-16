@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skryba - Rejestrator czasu pracy | Scribe Systems</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript"> window.$crisp=[];window.CRISP_WEBSITE_ID="921d5e65-3e3f-4bd9-9e3a-ee0d9646bb16";(function(){ d=document;s=d.createElement("script"); s.src="https://client.crisp.chat/l.js"; s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})(); </script>
+</head>
+<body class="bg-white">
+<!-- Navigation -->
+<nav class="bg-white border-gray-200 px-4 lg:px-6 py-4 fixed w-full z-50">
+    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+        <a href="#" class="flex items-center">
+            <span class="self-center text-2xl font-semibold whitespace-nowrap">Scribe Systems</span>
+        </a>
+        <div class="flex items-center lg:order-2">
+            <a href="#contact" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2">Kontakt</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="bg-white pt-24">
+    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+        <div class="mr-auto place-self-center lg:col-span-7">
+            <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">
+                Skryba: Rejestrator czasu pracy
+            </h1>
+            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">
+                Usprawnij zarządzanie zespołu dzięki inteligentnemu systemowi rejestracji czasu pracy. Bezpieczny, wydajny i zaprojektowany dla nowoczesnych firm.
+            </p>
+            <a href="#contact" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300">
+                Rozpocznij
+                <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+            <img src="device.png" alt="Urządzenie Skryba" class="rounded-lg shadow-lg">
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="bg-gray-50 py-24">
+    <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16">
+        <h2 class="mb-12 text-3xl font-extrabold tracking-tight text-center text-gray-900">
+            Zaawansowane Funkcje dla Nowoczesnych Miejsc Pracy
+        </h2>
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <!-- NFC/RFID Support -->
+            <div class="p-6 bg-white rounded-lg shadow">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-id-card text-2xl text-blue-600 mr-3"></i>
+                    <h3 class="text-xl font-bold">Obsługa NFC/RFID</h3>
+                </div>
+                <p class="text-gray-500">Bezproblemowa rejestracja wejścia i wyjścia za pomocą technologii kart zbliżeniowych.</p>
+            </div>
+
+            <!-- Real-time Synchronization -->
+            <div class="p-6 bg-white rounded-lg shadow">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-sync text-2xl text-blue-600 mr-3"></i>
+                    <h3 class="text-xl font-bold">Synchronizacja w Czasie Rzeczywistym</h3>
+                </div>
+                <p class="text-gray-500">Natychmiastowa synchronizacja danych z systemem zarządzania w chmurze.</p>
+            </div>
+
+            <!-- Secure Authentication -->
+            <div class="p-6 bg-white rounded-lg shadow">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-shield-alt text-2xl text-blue-600 mr-3"></i>
+                    <h3 class="text-xl font-bold">Bezpieczna Autoryzacja</h3>
+                </div>
+                <p class="text-gray-500">Bezpieczeństwo klasy korporacyjnej z szyfrowaną transmisją danych.</p>
+            </div>
+
+            <!-- Ethernet & WiFi -->
+            <div class="p-6 bg-white rounded-lg shadow">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-network-wired text-2xl text-blue-600 mr-3"></i>
+                    <h3 class="text-xl font-bold">Podwójna Łączność</h3>
+                </div>
+                <p class="text-gray-500">Elastyczne opcje połączenia z obsługą zarówno Ethernet jak i WiFi.</p>
+            </div>
+
+            <!-- Easy Management -->
+            <div class="p-6 bg-white rounded-lg shadow">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-cogs text-2xl text-blue-600 mr-3"></i>
+                    <h3 class="text-xl font-bold">Łatwe Zarządzanie</h3>
+                </div>
+                <p class="text-gray-500">Prosta konfiguracja i zarządzanie urządzeniem przez interfejs webowy.</p>
+            </div>
+
+            <!-- Automatic Updates -->
+            <div class="p-6 bg-white rounded-lg shadow">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-arrow-up text-2xl text-blue-600 mr-3"></i>
+                    <h3 class="text-xl font-bold">Automatyczne Aktualizacje</h3>
+                </div>
+                <p class="text-gray-500">Automatyczne aktualizacje oprogramowania zapewniają aktualność systemu.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="bg-white py-24">
+    <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+            <div>
+                <h2 class="mb-4 text-3xl font-extrabold">Gotowy na modernizację?</h2>
+                <p class="text-gray-500 mb-6">Skontaktuj się z naszym zespołem sprzedaży, aby dowiedzieć się więcej o Skrybie i jak może pomóc Twojej organizacji.</p>
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4">Informacje Kontaktowe</h3>
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-envelope text-blue-600 mr-3"></i>
+                        <p>contact@scribe.systems</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-50 p-8 rounded-lg">
+                <iframe title="Contact Form" src="https://plugins.crisp.chat/urn:crisp.im:contact-form:0/contact/921d5e65-3e3f-4bd9-9e3a-ee0d9646bb16" referrerpolicy="origin" sandbox="allow-forms allow-popups allow-scripts allow-same-origin" width="100%" height="600px" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white">
+    <div class="max-w-screen-xl px-4 py-12 mx-auto">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+            <div>
+                <h2 class="mb-6 text-xl font-bold">Scribe Systems</h2>
+                <p class="text-gray-400">Innowacyjne rozwiązania dla nowoczesnego zarządzania personelem. Premiera urządzenia: 2024</p>
+            </div>
+            <div>
+                <h3 class="mb-6 text-lg font-semibold">Szybkie Linki</h3>
+                <ul class="text-gray-400">
+                    <li class="mb-2"><a href="#" class="hover:text-white">Strona Główna</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-white">Funkcje</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-white">Kontakt</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="mb-6 text-lg font-semibold">Połącz Się z Nami</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-8 border-gray-700">
+        <p class="text-center text-gray-400">© 2024 Scribe Systems. Wszelkie prawa zastrzeżone.</p>
+    </div>
+</footer>
+</body>
+</html>
