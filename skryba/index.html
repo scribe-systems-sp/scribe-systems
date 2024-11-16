@@ -8,8 +8,97 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript"> window.$crisp=[];window.CRISP_WEBSITE_ID="921d5e65-3e3f-4bd9-9e3a-ee0d9646bb16";(function(){ d=document;s=d.createElement("script"); s.src="https://client.crisp.chat/l.js"; s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})(); </script>
+    <style>
+        @keyframes rocketFloat {
+            0% {
+                transform: translateY(0px) rotate(2deg);
+            }
+            50% {
+                transform: translateY(-10px) rotate(2deg);
+            }
+            100% {
+                transform: translateY(0px) rotate(2deg);
+            }
+        }
+
+        @keyframes flameFlicker {
+            0%, 100% {
+                opacity: 0.8;
+                transform: scale(0.9);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+        }
+
+        .rocket-container {
+            animation: rocketFloat 3s ease-in-out infinite;
+            display: inline-flex;
+            align-items: center;
+            background: #2563eb;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            position: relative;
+        }
+
+        .rocket-icon {
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .rocket-icon::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: -2px;
+            width: 12px;
+            height: 20px;
+            background: linear-gradient(to bottom,
+            rgba(255, 165, 0, 0.8),
+            rgba(255, 69, 0, 0.4),
+            rgba(255, 69, 0, 0));
+            filter: blur(2px);
+            animation: flameFlicker 0.6s ease-in-out infinite;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            transform-origin: top;
+        }
+
+        .rocket-container:hover .rocket-icon {
+            transform: translateX(4px) translateY(-4px);
+        }
+
+        .rocket-container:hover .rocket-icon::after {
+            height: 25px;
+            filter: blur(3px);
+        }
+
+        @keyframes particleEmit {
+            0% {
+                transform: translateY(0) translateX(0) scale(1);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(20px) translateX(-10px) scale(0);
+                opacity: 0;
+            }
+        }
+
+        .rocket-container::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 25px;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 165, 0, 0.6);
+            border-radius: 50%;
+            animation: particleEmit 1s ease-out infinite;
+        }
+    </style>
 </head>
 <body class="bg-white">
 <!-- Navigation -->
@@ -27,7 +116,15 @@
 <!-- Hero Section -->
 <section class="bg-white pt-24">
     <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-        <div class="mr-auto place-self-center lg:col-span-7">
+        <div class="mr-auto place-self-center lg:col-span-7 relative">
+            <!-- Premiera overlay -->
+            <div class="absolute -top-4 -right-4">
+                <div class="rocket-container text-white">
+                    <i class="fas fa-rocket text-xl rocket-icon mr-2"></i>
+                    <span class="font-bold">Premiera 1 kwartał 2025</span>
+                </div>
+            </div>
+
             <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">
                 Skryba: Rejestrator czasu pracy
             </h1>
@@ -139,7 +236,7 @@
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div>
                 <h2 class="mb-6 text-xl font-bold">Scribe Systems</h2>
-                <p class="text-gray-400">Innowacyjne rozwiązania dla nowoczesnego zarządzania personelem. Premiera urządzenia: 2024</p>
+                <p class="text-gray-400">Innowacyjne rozwiązania dla nowoczesnego zarządzania personelem. Premiera urządzenia: 2025</p>
             </div>
             <div>
                 <h3 class="mb-6 text-lg font-semibold">Szybkie Linki</h3>
