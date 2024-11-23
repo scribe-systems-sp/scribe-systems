@@ -255,6 +255,154 @@
     </div>
   </div>
 </div>
+<hr>
+<div class="w-full bg-gray-50 py-16">
+  <div class="max-w-4xl mx-auto p-8 bg-white rounded-xl shadow-lg">
+    <h2 class="text-3xl font-bold text-gray-900 mb-2 text-center">To niby tylko 15 minut...</h2>
+    <p class="text-gray-500 text-center mb-12">ale zobacz, jak przekłada się to na realne korzyści</p>
+
+    <div class="space-y-10">
+      <div class="space-y-4 bg-gray-50 p-6 rounded-lg">
+        <div class="flex justify-between">
+          <label class="text-lg font-medium text-gray-700">Liczba pracowników</label>
+          <span class="text-lg font-semibold text-blue-600" id="employeesValue">5</span>
+        </div>
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="5"
+          id="employeesSlider"
+          class="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+        />
+      </div>
+
+      <div class="space-y-4 bg-gray-50 p-6 rounded-lg">
+        <div class="flex justify-between">
+          <label class="text-lg font-medium text-gray-700">Zwrócony czas (minuty dziennie)</label>
+          <span class="text-lg font-semibold text-blue-600" id="timeValue">15 min</span>
+        </div>
+        <input
+          type="range"
+          min="5"
+          max="60"
+          step="5"
+          value="15"
+          id="timeSlider"
+          class="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+        />
+      </div>
+
+      <div class="mt-12 p-8 bg-blue-50 rounded-lg border border-blue-100">
+        <div class="grid grid-cols-3 gap-8 items-center">
+          <!-- Lewa korzyść -->
+          <div class="text-center opacity-0 -translate-x-10 transition-all duration-700" id="leftBenefit">
+            <div class="text-4xl text-gray-600 mb-3">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h3 class="font-semibold text-gray-700 mb-2">Koniec z papierem</h3>
+            <p class="text-sm text-gray-500">Eliminacja papierowych list obecności</p>
+          </div>
+
+          <!-- Główna wartość (środek) -->
+          <div class="text-center">
+            <p class="text-lg text-gray-600 mb-4">Miesięczne oszczędności</p>
+            <div class="text-5xl font-bold text-blue-600 mb-6" id="savingsValue">0 zł</div>
+            <p class="text-sm text-gray-500">
+              * Kalkulacja uwzględnia stawkę 27,70 zł/h, 22 dniowy okres pracy oraz 200 zł miesięcznie na zarządzaniu listą obecności
+            </p>
+          </div>
+
+          <!-- Prawa korzyść -->
+          <div class="text-center opacity-0 translate-x-10 transition-all duration-700" id="rightBenefit">
+            <div class="text-4xl text-gray-600 mb-3">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="font-semibold text-gray-700 mb-2">Zadowolony zespół</h3>
+            <p class="text-sm text-gray-500">Sprawiedliwy system dla wszystkich</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        document.getElementById('leftBenefit').classList.remove('opacity-0', '-translate-x-10');
+        document.getElementById('rightBenefit').classList.remove('opacity-0', 'translate-x-10');
+        // Przestań obserwować po pierwszym pokazaniu
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.2 // Animacja rozpocznie się gdy 20% elementu będzie widoczne
+  });
+
+
+  const benefitsSection = document.querySelector('.grid-cols-3');
+  observer.observe(benefitsSection);
+
+  const employeesSlider = document.getElementById('employeesSlider');
+  const timeSlider = document.getElementById('timeSlider');
+  const employeesValue = document.getElementById('employeesValue');
+  const timeValue = document.getElementById('timeValue');
+  const savingsValue = document.getElementById('savingsValue');
+
+  const hourlyRate = 27.70;
+  const schedulingSavings = 200;
+  let currentSavings = 0;
+  let targetSavings = 0;
+
+  function formatCurrency(value) {
+    return new Intl.NumberFormat('pl-PL', {
+      style: 'currency',
+      currency: 'PLN'
+    }).format(value);
+  }
+
+  function animateNumber(timestamp) {
+    if (!animateNumber.start) animateNumber.start = timestamp;
+    const progress = timestamp - animateNumber.start;
+
+    if (progress < 1000) { // 1000ms = 1s duration
+      const currentValue = currentSavings + (targetSavings - currentSavings) * (progress / 1000);
+      savingsValue.textContent = formatCurrency(Math.round(currentValue));
+      requestAnimationFrame(animateNumber);
+    } else {
+      savingsValue.textContent = formatCurrency(Math.round(targetSavings));
+      currentSavings = targetSavings;
+      animateNumber.start = null;
+    }
+  }
+
+  function calculateSavings() {
+    const employees = parseInt(employeesSlider.value);
+    const savedTime = parseInt(timeSlider.value);
+
+    // Daily savings per employee
+    const dailySavingsPerEmployee = (savedTime / 60) * hourlyRate;
+    // Monthly savings (22 working days) + scheduling savings
+    targetSavings = (dailySavingsPerEmployee * employees * 22) + schedulingSavings;
+
+    requestAnimationFrame(animateNumber);
+  }
+
+  employeesSlider.addEventListener('input', (e) => {
+    employeesValue.textContent = e.target.value;
+    calculateSavings();
+  });
+
+  timeSlider.addEventListener('input', (e) => {
+    timeValue.textContent = `${e.target.value} min`;
+    calculateSavings();
+  });
+
+  // Initial calculation
+  // Animacja korzyści po załadowaniu
+  calculateSavings();
+</script>
 
 <hr>
 
